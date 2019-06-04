@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import RealmSwift    // 追加する
 
 class InputViewController: UIViewController {
-
+    
     
     @IBOutlet var titleTextField: UITextField!
     
@@ -23,7 +24,7 @@ class InputViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // 背景をタップしたらdismissKeyboardメソッドを呼ぶように設定する
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(dismissKeyboard))
         self.view.addGestureRecognizer(tapGesture)
@@ -33,8 +34,6 @@ class InputViewController: UIViewController {
         datePicker.date = task.date
         
     }
-
-
     override func viewWillDisappear(_ animated: Bool) {
         try! realm.write {
             self.task.title = self.titleTextField.text!
@@ -51,10 +50,4 @@ class InputViewController: UIViewController {
         view.endEditing(true)
     }
     
-    
-    
-    
-    
-    
-
 }
