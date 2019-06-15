@@ -20,6 +20,8 @@ class InputViewController: UIViewController {
     
     @IBOutlet var datePicker: UIDatePicker!
     
+    @IBOutlet var categoryTextField: UITextField!
+   
     let realm = try! Realm()
     var task: Task!   // 追加する
     
@@ -28,13 +30,13 @@ class InputViewController: UIViewController {
         super.viewDidLoad()
         
         // 背景をタップしたらdismissKeyboardメソッドを呼ぶように設定する
-        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(dismissKeyboard))
-        self.view.addGestureRecognizer(tapGesture)
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(dismissKeyboard))    //キーボードを消す areget(self)はinputViewのこと
+        self.view.addGestureRecognizer(tapGesture)  //タップ認識のインスタンス作成
         
         titleTextField.text = task.title
         contentsTextView.text = task.contents
         datePicker.date = task.date
-        
+        categoryTextField.text = task.category
     }
     
     

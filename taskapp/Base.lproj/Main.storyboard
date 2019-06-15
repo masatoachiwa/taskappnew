@@ -119,6 +119,20 @@
                                     <!--2019-06-03 10:47:06 +0000-->
                                 </date>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9K2-04-p68">
+                                <rect key="frame" x="10" y="513" width="394" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l39-aj-6Qp">
+                                <rect key="frame" x="10" y="542" width="394" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -141,6 +155,7 @@
                         <viewLayoutGuide key="safeArea" id="2Pe-kA-4Tn"/>
                     </view>
                     <connections>
+                        <outlet property="categoryTextField" destination="l39-aj-6Qp" id="w37-4u-BWy"/>
                         <outlet property="contentsTextView" destination="0Nc-d6-kDi" id="USj-fi-BlH"/>
                         <outlet property="datePicker" destination="GQL-aH-QjA" id="esg-jV-I7p"/>
                         <outlet property="titleTextField" destination="i7i-5j-w7r" id="aBl-WK-TyI"/>
